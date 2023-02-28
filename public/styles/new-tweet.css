@@ -6,10 +6,15 @@ main {
 .tweet-button {
   color: white;
   background-color: #4056A1;
+  font-family: 'Bungee', cursive;
 }
 
-.counter, .tweet-button {
+.counter {
   font-family: 'Bungee', cursive;
+}
+
+.counter-over-limit {
+  color: red;
 }
 
 #tweet-text {

@@ -2,14 +2,16 @@ $(document).ready(function() {
 
   $('#tweet-text').on('keyup', function() {
     const textLength = $(this).val().length;
-    const maxLength = $(this).attr("maxlength");
-
+    const maxLength = 140;
     const counter = $(this).parent().find('.counter');
-    if (textLength <= 140) {
-      counter.text(maxLength - textLength);
-    } 
+    const remainingLength = maxLength - textLength;
+    counter.text(remainingLength);
+
+    if (remainingLength < 0) {
+      counter.addClass('counter-over-limit');
+    } else {
+      counter.removeClass('counter-over-limit');
+    }
   });
-  
-  console.log("Ready!");
   
 });
