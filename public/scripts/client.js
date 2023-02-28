@@ -14,13 +14,31 @@ $(document).ready(function() {
   };
 
   const createTweetElement = (data) => {
-    return $(`<article class="tweet">${data.content.text}</article>`);
+    const result = $(`<article class="tweet">
+    <header>
+      <div class="user">
+        <img src=${data.user.avatars}>
+        <p>${data.user.name}</p>
+      </div>
+      <div class="username">${data.user.handle}</div>
+    </header>
+    <h4 id="tweets-text">${data.content.text}</h4>
+    <footer>
+      <span class="">${data.created_at}</span>
+      <span class="right-corner-icons">
+        <i class="fa-sharp fa-solid fa-flag"></i> 
+        <i class="fa-solid fa-retweet"></i> 
+        <i class="fa-solid fa-heart"></i>
+      </span>
+    </footer>
+  </article>`);
+    return result;
   };
 
   const $tweet = createTweetElement(tweetData);
 
   // // Test / driver code (temporary)
   console.log($tweet); // to see what it looks like
-  $('#tweets-text').append($tweet);
+  $('.tweets-container').append($tweet);
 
 });

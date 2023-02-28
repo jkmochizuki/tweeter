@@ -18,11 +18,23 @@ article.tweet > header, footer {
   justify-content: space-between;
 }
 
+article.tweet > header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 article.tweet > footer {
   border-top: solid #545149 medium;
   padding: 20px;
   font-size: medium;
   font-weight: bold;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 10%;
 }
 
 .username {
@@ -35,7 +47,7 @@ article.tweet > footer {
 }
 
 .right-corner-icons {
-margin-top: -10px;
+  margin-top: -10px;
 }
 
 .fa-flag:hover {
