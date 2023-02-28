@@ -25,6 +25,9 @@
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Tweet Container CSS -->
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -45,7 +48,7 @@
         </div>
     </nav>
 
-    <header>
+    <header class="header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -68,6 +71,19 @@
             </div>
           </div>
         </form>
+      </section>
+      <section class ="tweet-container">
+        <article class="tweet">
+          <header>
+            <p class="name">Name</p>
+            <p class="username">@name</p>
+          </header>
+          <h4 class="tweet-text">tweet text</h4>
+          <footer>
+            <span class="">10 days ago</span>
+            <span class="lower-right-corner">Icons</span>
+          </footer>
+        </article>
       </section>
     </main>
   </body>

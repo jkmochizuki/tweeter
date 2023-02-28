@@ -1,0 +1,32 @@
+.tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid #545149 medium;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin-bottom: 40px;
+}
+
+article.tweet > header, footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article.tweet > footer {
+  border-top: solid #545149 medium;
+  padding: 20px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.username {
+  color: #c6c3be;
+}
+
+.tweet-text {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+

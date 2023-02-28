@@ -1,34 +1,26 @@
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.tweet-button {
-  color: white;
-  background-color: #4056A1;
-  font-family: 'Bungee', cursive;
-}
-
-.counter {
-  font-family: 'Bungee', cursive;
-}
-
-.counter-over-limit {
-  color: red;
-}
-
-#tweet-text {
+textarea {
   background-color: #f4f1ec;
   border: 0;
   outline: 0;
   border-bottom: solid #545149 medium;
   color: #545149;
   font-weight: bold;
-  width: 150vh;
+  width: 100%;
   margin-bottom: 20px;
 }
 
 .tweet-footer {
   display: flex;
   justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  margin-bottom: 60px;
+}
+
+.tweet-button {
+  color: white;
+  background-color: #4056A1;
+}
+
+.red-color {
+  color: red;
 }

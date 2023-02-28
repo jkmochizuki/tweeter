@@ -8,9 +8,9 @@ $(document).ready(function() {
     counter.text(remainingLength);
 
     if (remainingLength < 0) {
-      counter.addClass('counter-over-limit');
+      counter.addClass('red-color');
     } else {
-      counter.removeClass('counter-over-limit');
+      counter.removeClass('red-color');
     }
   });
   
