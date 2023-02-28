@@ -21,10 +21,10 @@ textarea {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-width: medium;
-  margin-bottom: 20px;
   outline: 0;
   font-weight: bold;
   width: 150vh;
+  margin-bottom: 20px;
 }
 
 .tweet-button-and-counter {
