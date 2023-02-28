@@ -1,4 +1,4 @@
-.tweet-container {
+.tweets-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,7 +8,7 @@
   margin-bottom: 100px;
 }
 
-.tweet-container:hover {
+.tweets-container:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
@@ -29,7 +29,7 @@ article.tweet > footer {
   color: #c6c3be;
 }
 
-.tweet-text {
+#tweets-text {
   padding-left: 20px;
   padding-right: 20px;
 }
