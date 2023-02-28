@@ -3,16 +3,16 @@ main {
   justify-content: center;
 }
 
-button {
+.tweet-button {
   color: white;
   background-color: #4056A1;
 }
 
-output, button {
+.counter, .tweet-button {
   font-family: 'Bungee', cursive;
 }
 
-textarea {
+#tweet-text {
   background-color: #f4f1ec;
   border: 0;
   outline: 0;
@@ -23,7 +23,7 @@ textarea {
   margin-bottom: 20px;
 }
 
-.tweet-button-and-counter {
+.tweet-footer {
   display: flex;
   justify-content: space-between;
 }
