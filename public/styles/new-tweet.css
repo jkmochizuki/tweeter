@@ -1,0 +1,33 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  font-family: 'Bungee', cursive;
+  color: white;
+  background-color: #4056A1;
+}
+
+output {
+  font-family: 'Bungee', cursive;
+}
+
+textarea {
+  background-color: #f4f1ec;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-width: medium;
+  margin-bottom: 20px;
+  outline: 0;
+  font-weight: bold;
+  width: 150vh;
+}
+
+.tweet-button-and-counter {
+  display: flex;
+  justify-content: space-between;
+}
