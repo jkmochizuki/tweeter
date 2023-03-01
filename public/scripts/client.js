@@ -66,7 +66,7 @@ $(document).ready(function() {
       dataType: 'json',
     })
       .then(function(res) {
-        renderTweets(res);
+        renderTweets(res.reverse());
       });
   
   });
