@@ -18,7 +18,7 @@ $(document).ready(function() {
     </header>
     <h4 id="tweets-text">${tweets.content.text}</h4>
     <footer>
-      <span class="">${tweets.created_at}</span>
+      <span class="timeago">${timeago.format(tweets.created_at)}</span>
       <span class="right-corner-icons">
         <i class="fa-sharp fa-solid fa-flag"></i> 
         <i class="fa-solid fa-retweet"></i> 
@@ -43,10 +43,10 @@ $(document).ready(function() {
     });
   });
 
-  // Get data from the server using AJAX
+  // Get data from the server using AJAX w/ jQuery
   const loadTweets = (function() {
     const $button = $('.tweet-button');
-    $button.click(function () {
+    $button.click(function() {
       $.ajax({
         url: "/tweets",
         type: 'GET',
