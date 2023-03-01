@@ -37,11 +37,24 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  const sendErrorMessage = (message) => {
+    $('.error-message').text(message);
+    $('.error-message').show();
+    $('textarea').addClass('red-border');
+  };
+
+  const showDefaultForm = () => {
+    $('.error-message').hide();
+    $('textarea').removeClass('red-border');
+    $('textarea').val('');
+    $('.counter').text(140);
+  }
 
   // Form data submission using jQuery
-  $('form').on('submit', function(event) {
+  $('form').on('submit', (event) => {
+    
     event.preventDefault();
-    const urlencoded = $(this).serialize();  // converts data to string of url coded information
+    const urlencoded = $('form').serialize();  // converts data to string of url coded information
     const newTweet = (urlencoded).split("=")[1];
     const dataIsValid = newTweet.length <= 140 && newTweet.length > 0;
 
@@ -52,15 +65,15 @@ $(document).ready(function() {
       })
         .then(function(tweets) {
           loadTweets();
+          showDefaultForm();
         });
     }
     if (newTweet.length > 140) {
-      alert('Your tweet exceeds maximum character limit.');
+      sendErrorMessage('Your tweet exceeds the maximum character limit.');
     }
-    if (newTweet.length === 0) {
-      alert('Tweet invalid.');
+    if (!newTweet.length) {
+      sendErrorMessage('Please enter at least 1 character.');
     }
-
   });
 
   // Get data from the server using AJAX w/ jQuery
@@ -71,8 +84,6 @@ $(document).ready(function() {
       dataType: 'json',
     })
       .then(function(tweets) {
-        $('#tweet-text').empty(); // empty the tweets container
-        $('.counter').text(140);
         renderTweets(tweets);
       });
   
