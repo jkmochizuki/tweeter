@@ -1,9 +1,11 @@
 $(document).ready(function() {
 
   const renderTweets = function(tweets) {
+    const $tweets = $('.tweets-container');
+    $tweets.text('');
     for (const tweet of tweets) {
       const result = createTweetElement(tweet);
-      $('.tweets-container').append(result);
+      $tweets.append(result);
     }
   };
 
@@ -29,33 +31,37 @@ $(document).ready(function() {
     return $tweet;
   };
 
+
   // Form data submission using jQuery
   $('form').on('submit', function(event) {
     event.preventDefault(); // prevents the default form submission behaviour of sending the post request and reloading the page
 
-    const data = $('form').serialize();  // converts data to query string
+    const data = $(this).serialize();  // converts data to query string
 
     //sends data to the server
-    $.ajax({
-      type: "POST",
-      url: '/tweets',
-      data: data
-    });
+    $.ajax('tweets', {
+      method: "POST",
+      data: data,
+    })
+      .then(function(res) {
+        loadTweets();
+        $('#tweet-text').val('');
+        $('.counter').text(140);
+      });
+    
   });
 
   // Get data from the server using AJAX w/ jQuery
   const loadTweets = (function() {
-    const $button = $('.tweet-button');
-    $button.click(function() {
-      $.ajax({
-        url: "/tweets",
-        type: 'GET',
-        dataType: 'json',
-        success: function(res) {
-          renderTweets(res);
-        }
+
+    $.ajax('/tweets', {
+      method: 'GET',
+      dataType: 'json',
+    })
+      .then(function(res) {
+        renderTweets(res);
       });
-    });
+  
   });
 
   loadTweets();
