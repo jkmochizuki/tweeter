@@ -1,11 +1,17 @@
 $(document).ready(function() {
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const renderTweets = function(tweets) {
     const $tweets = $('.tweets-container');
     $tweets.text('');
-    for (const tweet of tweets) {
-      const result = createTweetElement(tweet);
-      $tweets.append(result);
+    for (const item of tweets) {
+      const tweet = createTweetElement(item);
+      $tweets.prepend(tweet);
     }
   };
 
@@ -18,7 +24,7 @@ $(document).ready(function() {
       </div>
       <div class="username">${tweets.user.handle}</div>
     </header>
-    <h4 id="tweets-text">${tweets.content.text}</h4>
+    <h4 id="tweets-text">${escape(tweets.content.text)}</h4>
     <footer>
       <span class="timeago">${timeago.format(tweets.created_at)}</span>
       <span class="right-corner-icons">
@@ -35,24 +41,23 @@ $(document).ready(function() {
   // Form data submission using jQuery
   $('form').on('submit', function(event) {
     event.preventDefault();
-    const data = $(this).serialize();  // converts data to query string
-    const dataIsValid = data.length <= 145 && data.length > 5;
+    const urlencoded = $(this).serialize();  // converts data to string of url coded information
+    const newTweet = (urlencoded).split("=")[1];
+    const dataIsValid = newTweet.length <= 140 && newTweet.length > 0;
 
     if (dataIsValid) {
       $.ajax('tweets', {
-        method: "POST",
-        data: data
+        method: 'POST',
+        data: urlencoded
       })
-        .then(function(res) {
+        .then(function(tweets) {
           loadTweets();
-          $('#tweet-text').val('');
-          $('.counter').text(140);
         });
     }
-    if (data.length > 145) {
+    if (newTweet.length > 140) {
       alert('Your tweet exceeds maximum character limit.');
     }
-    if (data.length === 5) {
+    if (newTweet.length === 0) {
       alert('Tweet invalid.');
     }
 
@@ -65,8 +70,10 @@ $(document).ready(function() {
       method: 'GET',
       dataType: 'json',
     })
-      .then(function(res) {
-        renderTweets(res.reverse());
+      .then(function(tweets) {
+        $('#tweet-text').empty(); // empty the tweets container
+        $('.counter').text(140);
+        renderTweets(tweets);
       });
   
   });
