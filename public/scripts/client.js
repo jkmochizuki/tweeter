@@ -56,8 +56,18 @@ $(document).ready(function() {
 
   renderTweets(tweetData);
 
+  // Form data submission using jQuery
   $('form').on('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // prevents the default form submission behaviour of sending the post request and reloading the page
+
+    const data = $('form').serialize();  // converts data to query string
+    
+    //sends data to the server
+    $.ajax({
+      type: "POST",
+      url: '/tweets',
+      data: data
+    });
   });
   
 });
