@@ -34,21 +34,28 @@ $(document).ready(function() {
 
   // Form data submission using jQuery
   $('form').on('submit', function(event) {
-    event.preventDefault(); // prevents the default form submission behaviour of sending the post request and reloading the page
-
+    event.preventDefault();
     const data = $(this).serialize();  // converts data to query string
+    const dataIsValid = data.length <= 145 && data.length > 5;
 
-    //sends data to the server
-    $.ajax('tweets', {
-      method: "POST",
-      data: data,
-    })
-      .then(function(res) {
-        loadTweets();
-        $('#tweet-text').val('');
-        $('.counter').text(140);
-      });
-    
+    if (dataIsValid) {
+      $.ajax('tweets', {
+        method: "POST",
+        data: data
+      })
+        .then(function(res) {
+          loadTweets();
+          $('#tweet-text').val('');
+          $('.counter').text(140);
+        });
+    }
+    if (data.length > 145) {
+      alert('Your tweet exceeds maximum character limit.');
+    }
+    if (data.length === 5) {
+      alert('Tweet invalid.');
+    }
+
   });
 
   // Get data from the server using AJAX w/ jQuery
