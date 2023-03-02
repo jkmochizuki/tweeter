@@ -20,6 +20,18 @@ nav {
   border: none;
 }
 
+.write-tweet-button:hover {
+  animation: bounce 1.5s infinite alternate-reverse;
+  position: relative;
+}
+
+@keyframes bounce {
+  0%   { top: 0px; }
+  50%  { top: 5px; }
+  100% { top: 10px; }
+}
+
+
 .nav-right-side {
   display: flex;
   flex-direction: column;
