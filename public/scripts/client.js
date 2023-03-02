@@ -6,7 +6,7 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
-  const renderTweets = function(tweets) {
+  const renderTweets = function (tweets) {
     const $tweets = $('.tweets-container');
     $tweets.text('');
     for (const item of tweets) {
@@ -37,58 +37,44 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  const sendErrorMessage = (message) => {
-    $('.error-message').text(message);
-    $('.error-message').show();
-    $('textarea').addClass('red-border');
-  };
-
-  const showDefaultForm = () => {
-    $('.error-message').hide();
-    $('textarea').removeClass('red-border');
-    $('textarea').val('');
-    $('.counter').text(140);
-  }
-
   // Form data submission using jQuery
   $('form').on('submit', (event) => {
-    
     event.preventDefault();
-    const urlencoded = $('form').serialize();  // converts data to string of url coded information
+    const urlencoded = $('form').serialize();
     const newTweet = (urlencoded).split("=")[1];
-    const dataIsValid = newTweet.length <= 140 && newTweet.length > 0;
 
-    if (dataIsValid) {
-      $.ajax('tweets', {
-        method: 'POST',
-        data: urlencoded
-      })
-        .then(function(tweets) {
-          loadTweets();
-          showDefaultForm();
-        });
-    }
-    if (newTweet.length > 140) {
+    if (newTweet.length > MAX_CHARACTERS_LIMIT) {
       sendErrorMessage('Your tweet exceeds the maximum character limit.');
+      return;
     }
+
     if (!newTweet.length) {
       sendErrorMessage('Please enter at least 1 character.');
+      return;
     }
+
+    showDefaultForm();
+
+    $.ajax('tweets', {
+      method: 'POST',
+      data: urlencoded
+    })
+      .then(function () {
+        loadTweets();
+      });
   });
 
   // Get data from the server using AJAX w/ jQuery
-  const loadTweets = (function() {
-
+  const loadTweets = (function () {
     $.ajax('/tweets', {
       method: 'GET',
       dataType: 'json',
     })
-      .then(function(tweets) {
+      .then(function (tweets) {
         renderTweets(tweets);
       });
-  
   });
 
   loadTweets();
-  
+
 });

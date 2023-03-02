@@ -6,6 +6,7 @@ textarea {
   color: #545149;
   font-weight: bold;
   width: 100%;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -23,4 +24,19 @@ textarea {
 
 .red-color {
   color: red;
+}
+
+.error-message {
+  display: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 10px;
+  margin-left: 30px;
+  color: red;
+  font-size: large;
+  align-self: flex-start,
+}
+
+.red-border {
+  border: solid red medium;
+  border-radius: 10px;
 }
