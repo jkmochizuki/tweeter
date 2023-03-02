@@ -1,7 +1,8 @@
-.header {
-  height: 520px;
-  width: 100%;
-  background-color:rgb(241, 238, 245);
+body > header {
+  height: 450px;
+  padding-left: -4vw;
+  background-color: #ffc872;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -9,5 +10,15 @@
   background-image: url(/images/background-image.png);
 }
 
-
-
+@media only screen and (min-width: 1024px) {
+  body > header { 
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1.5;
+    margin: 4%;
+    margin-top: 200px;
+    border-radius: 15px;
+  }
+}

@@ -43,6 +43,7 @@ article.tweet > footer {
 #tweets-text {
   padding-left: 20px;
   padding-right: 20px;
+  overflow-wrap: break-word;
 }
 
 .right-corner-icons {
