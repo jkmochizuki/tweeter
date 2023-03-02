@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-  const escape = function(str) {
+  const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -15,7 +15,7 @@ $(document).ready(function() {
     }
   };
 
-  const createTweetElement = (tweets) => {
+  const createTweetElement = function (tweets) {
     const $tweet = $(`<article class="tweet">
     <header>
       <div class="user">
@@ -38,10 +38,10 @@ $(document).ready(function() {
   };
 
   // Form data submission using jQuery
-  $('form').on('submit', (event) => {
+  $('form').on('submit', function (event) {
     event.preventDefault();
-    const urlencoded = $('form').serialize();
-    const newTweet = (urlencoded).split("=")[1];
+    const urlencoded = $(this).serialize();
+    const newTweet = $(this).children('#tweet-text').val();
 
     if (newTweet.length > MAX_CHARACTERS_LIMIT) {
       sendErrorMessage('Your tweet exceeds the maximum character limit.');

@@ -2,9 +2,8 @@ $(document).ready(function() {
 
   $('#tweet-text').on('keyup', function() {
     const textLength = $(this).val().length;
-    const maxLength = 140;
     const counter = $(this).parent().find('.counter');
-    const remainingLength = maxLength - textLength;
+    const remainingLength = MAX_CHARACTERS_LIMIT - textLength;
     counter.text(remainingLength);
 
     if (remainingLength < 0) {
