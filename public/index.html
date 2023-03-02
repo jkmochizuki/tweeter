@@ -35,7 +35,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" ></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/helper-functions.js"></script>
+    <script type="text/javascript" src="/scripts/helpers.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
@@ -45,9 +45,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
         <span class="logo">TWEETER</span>
-        <div class="container-right">
+        <div class="nav-right-side">
           <div><b>Write</b> a new tweet</div>
-          <div class="icon"><i class="fa-solid fa-angles-down"></i></div>
+          <button class="write-tweet-button" type="submit"><i class="fa-solid fa-angles-down"></i></button>
         </div>
     </nav>
 
@@ -62,7 +62,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section class="new-tweet" style="display: none;">
         <h2>What are you humming about?</h2>
         <form>
           <label for="tweet-text"></label>

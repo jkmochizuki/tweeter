@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+  const showForm = function () {
+    $('.write-tweet-button').on('click', function () {
+      $(this).parent().parent().parent().find('.new-tweet').slideToggle();
+    });
+  };
+
+  showForm();
+  
   const renderTweets = function (tweets) {
     const $tweets = $('.tweets-container');
     $tweets.text('');
@@ -70,5 +78,9 @@ $(document).ready(function () {
   });
 
   loadTweets();
+
+
+
+ 
 
 });

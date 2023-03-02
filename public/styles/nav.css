@@ -14,9 +14,14 @@ nav {
   font-family: 'Bungee', cursive;
 }
 
-.icon {
-  display: flex;
-  justify-content: center;
+.write-tweet-button {
   color: red;
+  background-color: #4056A1;
+  border: none;
 }
 
+.nav-right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
