@@ -3,6 +3,7 @@ $(document).ready(function () {
   const showForm = function () {
     $('.write-tweet-button').on('click', function () {
       $(this).parent().parent().parent().find('.new-tweet').slideToggle();
+      $('#tweet-text').focus();
     });
   };
 
@@ -39,7 +40,6 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  // Form data submission using jQuery
   $('form').on('submit', function (event) {
     event.preventDefault();
     const urlencoded = $(this).serialize();
@@ -78,9 +78,5 @@ $(document).ready(function () {
   });
 
   loadTweets();
-
-
-
- 
 
 });
