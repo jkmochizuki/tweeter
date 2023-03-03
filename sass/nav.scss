@@ -1,19 +1,21 @@
 @import '_variables';
+@import '_mixins';
 
 nav {
   height: $base-measure * 4;
   width: 100%;
   padding: $base-measure;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(
+    $flex-direction: row,
+    $justify-content: space-between
+  );
   position: fixed;
 }
 
 .nav-right-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flex(
+    $align-items: none
+  );
 }
 
 .logo {

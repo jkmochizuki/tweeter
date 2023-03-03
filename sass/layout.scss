@@ -4,6 +4,7 @@
  * Do not modify these two selectors, please
  */
 @import '_variables';
+@import '_mixins';
 
 html {
   box-sizing: border-box;
@@ -21,9 +22,10 @@ body {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flex(
+    $justify-content: space-between,
+    $align-items: none
+  );
   width: 90%;
   background-color: $background-color;
   margin: auto;

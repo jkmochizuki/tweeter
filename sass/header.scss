@@ -1,12 +1,13 @@
 @import '_variables';
+@import '_mixins';
 
 body > header {
-  height: 480px;
+  height: $base-measure * 20;
   background-color: $background-color-header;
   color: $base-color-purple;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  @include flex(
+    $justify-content: flex-end
+  );
   align-items: center;
   text-align: center;
   background-image: $background-image;
@@ -18,10 +19,8 @@ body > header {
 
 @media only screen and (min-width: 1024px) {
   body > header { 
-    height: 430px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: $base-measure * 20;
+    @include flex();
     flex: 1.2;
     margin: $base-measure * 2;
     margin-top: $base-measure * 8;
@@ -33,8 +32,9 @@ body > header {
 @media only screen and (max-width: 400px) {
   body > header { 
     height: $base-measure * 9;
-    display: flex;
-    justify-content: flex-end;
+    @include flex(
+      $justify-content: flex-end
+    );
     align-items: center;
     color: $base-color-purple;
     font-size: $base-measure / 2;

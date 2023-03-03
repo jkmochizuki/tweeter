@@ -1,9 +1,11 @@
 @import '_variables';
+@import '_mixins';
 
 .tweet {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flex(
+    $justify-content: space-between,
+    $align-items: none
+  );
   border: solid $base-color-dark-grey medium;
   padding-left: $base-measure;
   padding-right: $base-measure;
