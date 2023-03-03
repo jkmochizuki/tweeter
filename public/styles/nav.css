@@ -34,7 +34,7 @@ nav {
     top: 0;
   }
   50% {
-    top: 0.75rem;
+    top: 0.5rem;
   }
   100% {
     top: 0;
@@ -54,7 +54,7 @@ nav {
 }
 @media only screen and (min-width: 1024px) {
   nav {
-    height: 120px;
+    height: 7.5rem;
     background-color: #805292;
     color: white;
   }

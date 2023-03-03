@@ -2,7 +2,7 @@
 
 .fa-circle-chevron-up {
   color: rgb(195, 51, 51);
-  font-size: 70px;
+  font-size: $base-measure * 3;
 }
 
 .bottom-button {
@@ -14,7 +14,7 @@
 }
 
 .bottom-button:hover {
-  transform: translateY(-10px);
+  transform: translateY(-$base-measure / 2);
 }
 
 @media only screen and (max-width: 400px) {

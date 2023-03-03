@@ -33,7 +33,7 @@ nav {
 
 @keyframes bounce {
   0%   { top: 0; }
-  50%  { top: $base-measure / 2; }
+  50%  { top: $base-measure / 3; }
   100% { top: 0; }
 }
 
@@ -53,7 +53,7 @@ nav {
 
 @media only screen and (min-width: 1024px) {
   nav {
-    height: 120px;
+    height: $base-measure * 5;
     background-color: $base-color-purple;
     color: white;
   }
