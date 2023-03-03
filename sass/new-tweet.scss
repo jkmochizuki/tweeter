@@ -26,15 +26,15 @@ textarea {
     color: white;
     background-color: $base-color-purple;
   }
+}
 
-  .error-message {
-    display: none;
-    float: right;
-    font-family: $base-font;
-    padding-left: $base-measure;
-    color: $warning-color;
-    font-size: $base-measure;
-  }
+.error-message {
+  display: none;
+  float: right;
+  font-family: $base-font;
+  padding-left: $base-measure;
+  color: $warning-color;
+  font-size: $base-measure;
 }
 
 .red-color {

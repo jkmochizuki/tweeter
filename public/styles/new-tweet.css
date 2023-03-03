@@ -24,7 +24,8 @@ textarea {
   color: white;
   background-color: #805292;
 }
-.tweet-footer .error-message {
+
+.error-message {
   display: none;
   float: right;
   font-family: "Source Sans Pro", sans-serif;

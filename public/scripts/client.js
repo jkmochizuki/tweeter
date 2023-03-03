@@ -26,7 +26,7 @@ $(document).ready(function () {
           <img src=${tweets.user.avatars}>&nbsp
           <span>${tweets.user.name}</span>
         </div>
-        <div class="username">${tweets.user.handle}</div>
+        <div class="handle">${tweets.user.handle}</div>
       </header>
       <h4 id="tweets-text">${escape(tweets.content.text)}</h4>
       <footer>
@@ -65,7 +65,10 @@ $(document).ready(function () {
     })
       .then(function () {
         loadTweets();
-      });
+      })
+      .catch(function (error) {
+      sendErrorMessage(`Please try again. </br> (Error: ${error.statusText})`)
+    });
   });
 
   // Get data from the server using AJAX w/ jQuery
