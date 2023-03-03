@@ -36,6 +36,13 @@ nav {
   100% { top: 10px; }
 }
 
+@media only screen and (max-width: 400px) {
+  nav {
+    font-size: 4vw;
+    height: 10vw;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   nav {
     background-image: url(/images/background-image.png);

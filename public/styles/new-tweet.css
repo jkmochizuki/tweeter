@@ -43,3 +43,9 @@ textarea {
   border: solid red medium;
   border-radius: 10px;
 }
+
+@media only screen and (max-width: 400px) {
+  .new-tweet {
+    font-size: 3vw;
+  }
+}

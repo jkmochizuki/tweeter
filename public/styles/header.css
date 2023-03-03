@@ -10,6 +10,10 @@ body > header {
   background-image: url(/images/background-image.png);
 }
 
+.small-img {
+  display: none;
+}
+
 @media only screen and (min-width: 1024px) {
   body > header { 
     height: 430px;
@@ -20,6 +24,25 @@ body > header {
     margin: 4rem;
     margin-top: 12rem;
     border-radius: 15px;
-    color: #805292;;
+    color: #805292;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body > header { 
+    height: 250px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #805292;
+    font-size: 4vw;
+  }
+
+  .regular-img {
+    display: none;
+  }
+
+  .small-img {
+    display: block;
   }
 }
