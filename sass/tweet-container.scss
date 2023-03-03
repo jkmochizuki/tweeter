@@ -1,16 +1,18 @@
+@import '_variables';
+
 .tweet {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid #545149 medium;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  border: solid $base-color-dark-grey medium;
+  padding-left: $base-measure;
+  padding-right: $base-measure;
+  margin-bottom: $base-measure * 2;
+  margin-top: $base-measure * 2;
 }
 
 .tweet:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .tweet > header, footer {
@@ -19,8 +21,8 @@
 }
 
 .tweet > header {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: $base-measure;
+  padding-bottom: $base-measure;
 }
 
 .user {
@@ -35,14 +37,14 @@
 }
 
 #tweets-text {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: $base-measure;
+  padding-right: $base-measure;
   overflow-wrap: break-word;
 }
 
 .tweet > footer {
-  border-top: solid #545149 medium;
-  padding: 1.5rem;
+  border-top: solid $base-color-dark-grey medium;
+  padding: $base-measure;
   font-size: medium;
   font-weight: bold;
 }
@@ -69,10 +71,12 @@
   .tweets-container {
     font-size: 3vw;
   }
-  .tweet > footer {
+
+  .tweet > footer  {
     font-size: 2vw;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   .tweet {
     max-width: 65vw;

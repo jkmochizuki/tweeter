@@ -1,7 +1,9 @@
+@import '_variables';
+
 nav {
   height: 100px;
   width: 100%;
-  padding: 1.5rem;
+  padding: $base-measure;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +17,7 @@ nav {
 }
 
 .logo {
-  font-family: "Bungee", cursive;
+  font-family: $font-logo;
 }
 
 .write-tweet-button {
@@ -30,35 +32,32 @@ nav {
 }
 
 @keyframes bounce {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: 5px;
-  }
-  100% {
-    top: 10px;
-  }
+  0%   { top: 0px; }
+  50%  { top: 5px; }
+  100% { top: 10px; }
 }
+
 @media only screen and (max-width: 400px) {
   nav {
     font-size: 4vw;
     height: 10vw;
   }
 }
+
 @media only screen and (max-width: 1023px) {
   nav {
     background-image: url(/images/background-image.png);
-    background-color: #ccaf89;
+    background-color: $background-color
   }
 }
+
 @media only screen and (min-width: 1024px) {
   nav {
     height: 120px;
-    background-color: #805292;
+    background-color: $base-color-purple;
     color: white;
   }
   .write-tweet-button {
-    background-color: #805292;
+    background-color: $base-color-purple;
   }
 }

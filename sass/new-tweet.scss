@@ -1,3 +1,5 @@
+@import '_variables';
+
 .new-tweet {
   margin-top: 1rem;
 }
@@ -6,41 +8,41 @@ textarea {
   background-color: #ebe7e0;
   border: 0;
   outline: 0;
-  border-bottom: solid #545149 medium;
-  color: #545149;
+  border-bottom: solid $base-color-dark-grey medium;
+  color: $base-color-dark-grey;
   font-weight: bold;
   width: 100%;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: $base-measure;
+  margin-bottom: $base-measure;
 }
 
 .tweet-footer {
   display: flex;
   justify-content: space-between;
-  font-family: "Bungee", cursive;
+  font-family: $font-logo;
   margin-bottom: 2rem;
 }
 
 .tweet-button {
   color: white;
-  background-color: #805292;
+  background-color: $base-color-purple;
 }
 
 .error-message {
   display: none;
   float: right;
-  font-family: "Source Sans Pro", sans-serif;
-  padding-left: 1.5rem;
-  color: red;
+  font-family: $base-font;
+  padding-left: $base-measure;
+  color: $warning-color;
   font-size: x-large;
 }
 
 .red-color {
-  color: red;
+  color: $warning-color;
 }
 
 .red-border {
-  border: solid red medium;
+  border: solid $warning-color medium;
   border-radius: 10px;
 }
 

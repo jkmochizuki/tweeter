@@ -1,7 +1,9 @@
+@import '_variables';
+
 body > header {
   height: 480px;
-  background-color: #ccaf89;
-  color: #805292;
+  background-color: $background-color;
+  color: $base-color-purple;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -15,30 +17,33 @@ body > header {
 }
 
 @media only screen and (min-width: 1024px) {
-  body > header {
+  body > header { 
     height: 430px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1.2;
-    margin: 3rem;
-    margin-top: 12rem;
+    margin: $base-measure * 2;
+    margin-top: $base-measure * 8;
     border-radius: 15px;
-    color: #805292;
+    color: $base-color-purple;
   }
 }
+
 @media only screen and (max-width: 400px) {
-  body > header {
+  body > header { 
     height: 250px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: #805292;
+    color: $base-color-purple;
     font-size: 4vw;
   }
+
   .regular-img {
     display: none;
   }
+
   .small-img {
     display: block;
   }
