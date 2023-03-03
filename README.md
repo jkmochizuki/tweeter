@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
-
+![gif nav-button and scroll-button"](https://github.com/jkmochizuki/tweeter/blob/master/docs/nav-button_scroll-button.mov)
 
 ## Getting Started
 
