@@ -52,7 +52,7 @@
 .right-corner-icons {
   display: flex;
   justify-content: space-between;
-  margin-top: -10px;
+  margin-top: -$base-measure / 2;
 }
 
 .fa-flag:hover {

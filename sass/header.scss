@@ -2,14 +2,14 @@
 
 body > header {
   height: 480px;
-  background-color: $background-color;
+  background-color: $background-color-header;
   color: $base-color-purple;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-  background-image: url(/images/background-image.png);
+  background-image: $background-image;
 }
 
 .small-img {

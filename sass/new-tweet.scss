@@ -5,7 +5,7 @@
 }
 
 textarea {
-  background-color: #ebe7e0;
+  background-color: $background-color;
   border: 0;
   outline: 0;
   border-bottom: solid $base-color-dark-grey medium;
@@ -20,7 +20,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   font-family: $font-logo;
-  margin-bottom: 2rem;
+  margin-bottom: $base-measure;
 }
 
 .tweet-button {
@@ -34,7 +34,7 @@ textarea {
   font-family: $base-font;
   padding-left: $base-measure;
   color: $warning-color;
-  font-size: x-large;
+  font-size: $base-measure;
 }
 
 .red-color {

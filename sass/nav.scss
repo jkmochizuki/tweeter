@@ -21,7 +21,7 @@ nav {
 }
 
 .write-tweet-button {
-  color: rgb(241, 0, 0);
+  color: $warning-color;
   border: none;
   background-color: transparent;
 }
@@ -32,9 +32,9 @@ nav {
 }
 
 @keyframes bounce {
-  0%   { top: 0px; }
-  50%  { top: 5px; }
-  100% { top: 10px; }
+  0%   { top: 0; }
+  50%  { top: $base-measure / 2; }
+  100% { top: 0; }
 }
 
 @media only screen and (max-width: 400px) {
@@ -46,8 +46,8 @@ nav {
 
 @media only screen and (max-width: 1023px) {
   nav {
-    background-image: url(/images/background-image.png);
-    background-color: $background-color
+    background-image: $background-image;
+    background-color: $background-color-header;
   }
 }
 

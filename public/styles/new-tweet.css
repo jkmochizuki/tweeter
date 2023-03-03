@@ -18,7 +18,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee", cursive;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .tweet-button {
@@ -32,7 +32,7 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
   padding-left: 1.5rem;
   color: red;
-  font-size: x-large;
+  font-size: 1.5rem;
 }
 
 .red-color {
