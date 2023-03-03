@@ -1,6 +1,5 @@
 body > header {
-  height: 500px;
-  padding-left: -4vw;
+  height: 480px;
   background-color: #ccaf89;
   color: #805292;;
   display: flex;
@@ -13,13 +12,13 @@ body > header {
 
 @media only screen and (min-width: 1024px) {
   body > header { 
-    height: 440px;
+    height: 430px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1.2;
-    margin: 4%;
-    margin-top: 200px;
+    margin: 4rem;
+    margin-top: 12rem;
     border-radius: 15px;
     color: #805292;;
   }

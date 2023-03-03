@@ -19,24 +19,26 @@ $(document).ready(function () {
   };
 
   const createTweetElement = function (tweets) {
-    const $tweet = $(`<article class="tweet">
-    <header>
-      <div class="user">
-        <img src=${tweets.user.avatars}>
-        <p>${tweets.user.name}</p>
-      </div>
-      <div class="username">${tweets.user.handle}</div>
-    </header>
-    <h4 id="tweets-text">${escape(tweets.content.text)}</h4>
-    <footer>
-      <span class="timeago">${timeago.format(tweets.created_at)}</span>
-      <span class="right-corner-icons">
-        <i class="fa-sharp fa-solid fa-flag"></i> 
-        <i class="fa-solid fa-retweet"></i> 
-        <i class="fa-solid fa-heart"></i>
-      </span>
-    </footer>
-  </article>`);
+    const $tweet =
+    $(`<article class="tweet">
+      <header>
+        <div class="user">
+          <img src=${tweets.user.avatars}>&nbsp
+          <span>${tweets.user.name}</span>
+        </div>
+        <div class="username">${tweets.user.handle}</div>
+      </header>
+      <h4 id="tweets-text">${escape(tweets.content.text)}</h4>
+      <footer>
+        <span class="timeago">${timeago.format(tweets.created_at)}</span>
+        <span class="right-corner-icons">
+          <i class="fa-sharp fa-solid fa-flag"></i>&nbsp
+          <i class="fa-solid fa-retweet"></i> &nbsp
+          <i class="fa-solid fa-heart"></i>
+        </span>
+      </footer>
+    </article>`);
+
     return $tweet;
   };
 
@@ -51,7 +53,7 @@ $(document).ready(function () {
     }
 
     if (!newTweet.length) {
-      sendErrorMessage('Please enter at least 1 character.');
+      sendErrorMessage('Please enter your tweet.');
       return;
     }
 

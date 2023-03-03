@@ -1,12 +1,18 @@
 nav {
-  height: 120px;
+  height: 100px;
   width: 100%;
   color: #805292;
-  padding: 1.5em;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+}
+
+.nav-right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logo {
@@ -30,12 +36,6 @@ nav {
   100% { top: 10px; }
 }
 
-.nav-right-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 @media only screen and (max-width: 1023px) {
   nav {
     background-image: url(/images/background-image.png);
@@ -45,6 +45,7 @@ nav {
 
 @media only screen and (min-width: 1024px) {
   nav {
+    height: 120px;
     background-color: #805292;
     color: white;
   }

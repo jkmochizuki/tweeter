@@ -1,3 +1,7 @@
+.new-tweet {
+  margin-top: 1rem;
+}
+
 textarea {
   background-color: #ebe7e0;
   border: 0;
@@ -6,15 +10,15 @@ textarea {
   color: #545149;
   font-weight: bold;
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .tweet-footer {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
-  margin-bottom: 60px;
+  margin-bottom: 2rem;
 }
 
 .tweet-button {
@@ -22,19 +26,18 @@ textarea {
   background-color: #805292;
 }
 
-.red-color {
-  color: red;
-}
-
 .error-message {
   display: none;
   float: right;
   font-family: 'Source Sans Pro', sans-serif;
-  padding-left: 30px;
+  padding-left: 1.5rem;
   color: red;
   font-size:x-large;
 }
 
+.red-color {
+  color: red;
+}
 
 .red-border {
   border: solid red medium;
