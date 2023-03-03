@@ -55,11 +55,16 @@ article.tweet > footer {
 }
 
 .fa-retweet:hover {
-  color: rgb(0, 106, 220);
+  color: #8e0bc5;
 }
 
 .fa-heart:hover {
   color: rgb(214, 27, 10);
 }
 
+@media only screen and (min-width: 1024px) {
+  .tweet {
+    max-width: 70vw;
+  }
+}
 

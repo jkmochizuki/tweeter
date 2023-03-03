@@ -7,7 +7,7 @@ const escape = (str) => {
 };
 
 const sendErrorMessage = (message) => {
-  $('.error-message').text(message);
+  $('.error-message').html(`<i class="fa-solid fa-triangle-exclamation"></i>&nbsp${message}`);
   $('.error-message').show();
   $('textarea').addClass('red-border');
 };
