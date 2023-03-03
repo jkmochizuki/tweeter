@@ -1,7 +1,7 @@
 nav {
   height: 120px;
   width: 100%;
-  color: #FFFFFF;
+  color: #805292;
   padding: 1.5em;
   display: flex;
   justify-content: space-between;
@@ -14,7 +14,7 @@ nav {
 }
 
 .write-tweet-button {
-  color: red;
+  color: rgb(241, 0, 0);
   border: none;
   background-color: transparent;
 }
@@ -38,9 +38,10 @@ nav {
 
 @media only screen and (min-width: 1024px) {
   nav {
-    background-color: #4056A1;
+    background-color: #805292;
+    color: white;
   }
   .write-tweet-button {
-    background-color: #4056A1;
+    background-color: #805292;
   }
 }
