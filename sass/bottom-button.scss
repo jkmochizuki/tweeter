@@ -19,6 +19,6 @@
 
 @media only screen and (max-width: 400px) {
   .fa-circle-chevron-up {
-    font-size: 10vw;
+    font-size: $base-measure * 1.5;
   }
 }

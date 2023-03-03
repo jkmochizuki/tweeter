@@ -16,7 +16,7 @@ html {
 body {
   color: $base-color-dark-grey;
   background-color: $background-color;
-  font-size: 24px;
+  font-size: $base-measure;
   font-family: $base-font;
 }
 
@@ -37,7 +37,7 @@ main {
   main {
     flex: 3;
     margin-top: $base-measure * 6;
-    margin-right: 4%;
+    margin-right: $base-measure * 2;
   }
 }
 

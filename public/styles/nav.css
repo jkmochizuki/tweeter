@@ -1,5 +1,5 @@
 nav {
-  height: 100px;
+  height: 6rem;
   width: 100%;
   padding: 1.5rem;
   display: flex;
@@ -42,8 +42,8 @@ nav {
 }
 @media only screen and (max-width: 400px) {
   nav {
-    font-size: 4vw;
-    height: 10vw;
+    font-size: 0.75rem;
+    height: 1.5rem;
   }
 }
 @media only screen and (max-width: 1023px) {

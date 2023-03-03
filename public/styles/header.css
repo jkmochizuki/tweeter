@@ -29,12 +29,12 @@ body > header {
 }
 @media only screen and (max-width: 400px) {
   body > header {
-    height: 250px;
+    height: 13.5rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     color: #805292;
-    font-size: 4vw;
+    font-size: 0.75rem;
   }
   .regular-img {
     display: none;

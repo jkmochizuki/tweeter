@@ -10,7 +10,7 @@
 }
 
 .tweet:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  box-shadow: 0 0 1.5rem rgba(33, 33, 33, 0.2);
 }
 
 .tweet > header, footer {
@@ -43,7 +43,7 @@
 .tweet > footer {
   border-top: solid #545149 medium;
   padding: 1.5rem;
-  font-size: medium;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -67,10 +67,10 @@
 
 @media only screen and (max-width: 400px) {
   .tweets-container {
-    font-size: 3vw;
+    font-size: 0.75rem;
   }
   .tweet > footer {
-    font-size: 2vw;
+    font-size: 0.5rem;
   }
 }
 @media only screen and (min-width: 1024px) {

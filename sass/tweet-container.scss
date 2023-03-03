@@ -12,7 +12,7 @@
 }
 
 .tweet:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  box-shadow: 0 0 $base-measure rgba(33,33,33,.2); 
 }
 
 .tweet > header, footer {
@@ -33,7 +33,7 @@
 }
 
 .username {
-  color: #c6c3be;
+  color: $username-color;
 }
 
 #tweets-text {
@@ -45,7 +45,7 @@
 .tweet > footer {
   border-top: solid $base-color-dark-grey medium;
   padding: $base-measure;
-  font-size: medium;
+  font-size: $base-measure / 1.5;
   font-weight: bold;
 }
 
@@ -69,11 +69,11 @@
 
 @media only screen and (max-width: 400px) {
   .tweets-container {
-    font-size: 3vw;
+    font-size: $base-measure / 2;
   }
 
   .tweet > footer  {
-    font-size: 2vw;
+    font-size: $base-measure / 3;
   }
 }
 

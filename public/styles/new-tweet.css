@@ -1,5 +1,5 @@
 .new-tweet {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 textarea {
@@ -41,11 +41,14 @@ textarea {
 
 .red-border {
   border: solid red medium;
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
 
 @media only screen and (max-width: 400px) {
   .new-tweet {
-    font-size: 3vw;
+    font-size: 0.75rem;
+  }
+  .error-message {
+    font-size: 0.75rem;
   }
 }

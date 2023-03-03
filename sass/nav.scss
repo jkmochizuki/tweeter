@@ -1,7 +1,7 @@
 @import '_variables';
 
 nav {
-  height: 100px;
+  height: $base-measure * 4;
   width: 100%;
   padding: $base-measure;
   display: flex;
@@ -39,8 +39,8 @@ nav {
 
 @media only screen and (max-width: 400px) {
   nav {
-    font-size: 4vw;
-    height: 10vw;
+    font-size: $base-measure / 2;
+    height: $base-measure;
   }
 }
 

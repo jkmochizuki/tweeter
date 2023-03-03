@@ -32,12 +32,12 @@ body > header {
 
 @media only screen and (max-width: 400px) {
   body > header { 
-    height: 250px;
+    height: $base-measure * 9;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     color: $base-color-purple;
-    font-size: 4vw;
+    font-size: $base-measure / 2;
   }
 
   .regular-img {

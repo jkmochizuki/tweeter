@@ -14,7 +14,7 @@ html {
 body {
   color: #545149;
   background-color: #ebe7e0;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -35,6 +35,6 @@ main {
   main {
     flex: 3;
     margin-top: 9rem;
-    margin-right: 4%;
+    margin-right: 3rem;
   }
 }

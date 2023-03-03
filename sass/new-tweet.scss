@@ -1,7 +1,7 @@
 @import '_variables';
 
 .new-tweet {
-  margin-top: 1rem;
+  margin-top: $base-measure;
 }
 
 textarea {
@@ -43,11 +43,15 @@ textarea {
 
 .red-border {
   border: solid $warning-color medium;
-  border-radius: 10px;
+  border-radius: $base-measure / 3;
 }
 
 @media only screen and (max-width: 400px) {
   .new-tweet {
-    font-size: 3vw;
+    font-size: $base-measure / 2;
+  }
+
+  .error-message {
+    font-size: $base-measure / 2;
   }
 }
