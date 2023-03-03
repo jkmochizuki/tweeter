@@ -20,13 +20,11 @@ textarea {
   font-family: "Bungee", cursive;
   margin-bottom: 1.5rem;
 }
-
-.tweet-button {
+.tweet-footer .tweet-button {
   color: white;
   background-color: #805292;
 }
-
-.error-message {
+.tweet-footer .error-message {
   display: none;
   float: right;
   font-family: "Source Sans Pro", sans-serif;

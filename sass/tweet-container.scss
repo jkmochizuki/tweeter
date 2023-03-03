@@ -11,31 +11,28 @@
   padding-right: $base-measure;
   margin-bottom: $base-measure * 2;
   margin-top: $base-measure * 2;
-}
 
-.tweet:hover {
-  box-shadow: 0 0 $base-measure rgba(33,33,33,.2); 
-}
-
-.tweet > header, footer {
-  display: flex;
-  justify-content: space-between;
+  &:hover {
+    box-shadow: 0 0 $base-measure rgba(33,33,33,.2); 
+  }
 }
 
 .tweet > header {
+  display: flex;
+  justify-content: space-between;
   padding-top: $base-measure;
   padding-bottom: $base-measure;
-}
 
-.user {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 50%;
-}
+  .user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+  }
 
-.username {
-  color: $username-color;
+  .username {
+    color: $username-color;
+  }
 }
 
 #tweets-text {
@@ -45,28 +42,30 @@
 }
 
 .tweet > footer {
+  display: flex;
+  justify-content: space-between;
   border-top: solid $base-color-dark-grey medium;
   padding: $base-measure;
   font-size: $base-measure / 1.5;
   font-weight: bold;
-}
 
-.right-corner-icons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: -$base-measure / 2;
-}
+  .right-corner-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -$base-measure / 2;
+  }
 
-.fa-flag:hover {
-  color: rgb(214, 198, 16);
-}
-
-.fa-retweet:hover {
-  color: #a60ee7;
-}
-
-.fa-heart:hover {
-  color: rgb(214, 27, 10);
+  .fa-flag:hover {
+    color: rgb(214, 198, 16);
+  }
+  
+  .fa-retweet:hover {
+    color: #a60ee7;
+  }
+  
+  .fa-heart:hover {
+    color: rgb(214, 27, 10);
+  }
 }
 
 @media only screen and (max-width: 400px) {

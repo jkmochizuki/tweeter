@@ -12,25 +12,25 @@ nav {
   position: fixed;
 }
 
-.nav-right-side {
-  @include flex(
-    $align-items: none
-  );
-}
-
 .logo {
   font-family: $font-logo;
 }
 
-.write-tweet-button {
-  color: $warning-color;
-  border: none;
-  background-color: transparent;
-}
+.nav-right-side {
+  @include flex(
+    $align-items: none
+  );
+  
+  .write-tweet-button {
+    color: $warning-color;
+    border: none;
+    background-color: transparent;
 
-.write-tweet-button:hover {
-  animation: bounce 1.5s infinite alternate-reverse;
-  position: relative;
+    &:hover {
+      animation: bounce 1.5s infinite alternate-reverse;
+      position: relative;
+    }
+  }
 }
 
 @keyframes bounce {

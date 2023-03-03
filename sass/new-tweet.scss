@@ -21,20 +21,20 @@ textarea {
   justify-content: space-between;
   font-family: $font-logo;
   margin-bottom: $base-measure;
-}
 
-.tweet-button {
-  color: white;
-  background-color: $base-color-purple;
-}
+  .tweet-button {
+    color: white;
+    background-color: $base-color-purple;
+  }
 
-.error-message {
-  display: none;
-  float: right;
-  font-family: $base-font;
-  padding-left: $base-measure;
-  color: $warning-color;
-  font-size: $base-measure;
+  .error-message {
+    display: none;
+    float: right;
+    font-family: $base-font;
+    padding-left: $base-measure;
+    color: $warning-color;
+    font-size: $base-measure;
+  }
 }
 
 .red-color {

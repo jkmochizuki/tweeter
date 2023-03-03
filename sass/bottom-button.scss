@@ -11,10 +11,10 @@
   bottom: 2%;
   border: 0;
   background-color: transparent;
-}
 
-.bottom-button:hover {
-  transform: translateY(-$base-measure / 2);
+  &:hover {
+    transform: translateY(-$base-measure / 2);
+  }
 }
 
 @media only screen and (max-width: 400px) {
